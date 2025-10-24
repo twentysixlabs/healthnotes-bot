@@ -30,7 +30,7 @@ RUN npm run build
 RUN npx playwright install-deps && npx playwright install --with-deps
 
 # Install MS Edge for Teams support
-RUN npx playwright install msedge
+# RUN npx playwright install msedge
 
 # --- Runtime Stage ---
 FROM mcr.microsoft.com/playwright:v1.56.0-jammy AS runtime
@@ -49,7 +49,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --from=base /app /app
 
 # Install MS Edge in runtime stage as well
-RUN npx playwright install msedge
+# RUN npx playwright install msedge
 
 # Ensure the Playwright cache directory has proper permissions (adjust path if needed)
 RUN mkdir -p /root/ms-playwright && chmod -R 777 /root/ms-playwright
