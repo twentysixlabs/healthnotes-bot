@@ -100,7 +100,7 @@ echo_info "Effective ADMIN_API_URL: $ADMIN_API_URL"
 # --- Variables for New User and Bot ---
 USER_EMAIL="testuser$(date +%s)@example.com"
 USER_NAME="Test User $(date +%s)"
-BOT_NAME="VexaFirstTestBot"
+BOT_NAME="Healthnotes AI Bot"
 PLATFORM="google_meet"
 
 # --- Function to stop the bot --- 
